@@ -1,0 +1,10 @@
+{
+  "name": "Business Admin Portal",
+  "description": "Manage business information and photos with camera capture.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
