@@ -47,17 +47,17 @@ export const DocumentChecklist: React.FC = () => {
   };
 
   return (
-    <section id="checklist" className="py-16 bg-blue-50/60 relative">
+    <section id="checklist" className="py-16 bg-black text-white relative border-b border-neutral-900">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
-          <span className="text-xs font-bold text-blue-700 uppercase tracking-widest bg-blue-100 px-3 py-1 rounded-full border border-blue-200">
+          <span className="text-xs font-bold text-blue-400 uppercase tracking-widest bg-neutral-900 px-3 py-1 rounded-full border border-neutral-800">
             Checklist Guide
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
             Documents to Bring to Our Shop
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
+          <p className="text-xs sm:text-sm text-neutral-400">
             Keep these documents ready when visiting our Pondicherry office.
           </p>
         </div>
@@ -73,10 +73,10 @@ export const DocumentChecklist: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
-              className={`px-4 py-2 rounded-lg text-xs font-bold transition-colors ${
+              className={`px-4 py-2 rounded-xl text-xs font-bold transition-all ${
                 activeTab === tab.id
-                  ? 'bg-blue-700 text-white shadow'
-                  : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
+                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+                  : 'bg-neutral-900 text-neutral-300 border border-neutral-800 hover:bg-neutral-800'
               }`}
             >
               {tab.label}
@@ -85,31 +85,31 @@ export const DocumentChecklist: React.FC = () => {
         </div>
 
         {/* Box */}
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-md space-y-4">
-          <div className="flex items-center justify-between border-b pb-3">
-            <h3 className="text-base font-bold text-slate-900 flex items-center">
-              <FileText className="w-4 h-4 text-blue-700 mr-2" />
+        <div className="bg-neutral-950 p-6 rounded-2xl border border-neutral-800 shadow-xl space-y-4">
+          <div className="flex items-center justify-between border-b border-neutral-800 pb-3">
+            <h3 className="text-base font-bold text-white flex items-center">
+              <FileText className="w-4 h-4 text-blue-400 mr-2" />
               Checklist for {activeTab.toUpperCase()}
             </h3>
             <button
               onClick={handleCopy}
-              className="px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-50 text-blue-800 border border-blue-200 hover:bg-blue-100 flex items-center"
+              className="px-3 py-1.5 rounded-lg text-xs font-bold bg-neutral-900 text-neutral-200 border border-neutral-800 hover:border-neutral-700 flex items-center"
             >
-              {copied ? <Check className="w-3.5 h-3.5 mr-1 text-emerald-600" /> : <Copy className="w-3.5 h-3.5 mr-1" />}
+              {copied ? <Check className="w-3.5 h-3.5 mr-1 text-emerald-400" /> : <Copy className="w-3.5 h-3.5 mr-1" />}
               {copied ? 'Copied!' : 'Copy List'}
             </button>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {lists[activeTab].map((item, idx) => (
-              <div key={idx} className="flex items-center p-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-800 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 mr-2 shrink-0" />
+              <div key={idx} className="flex items-center p-3 rounded-xl bg-black border border-neutral-800 text-xs text-neutral-200 font-medium">
+                <CheckCircle2 className="w-4 h-4 text-emerald-400 mr-2 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
           </div>
 
-          <p className="text-xs text-blue-900 bg-blue-50 p-3 rounded-lg border border-blue-100">
+          <p className="text-xs text-neutral-300 bg-neutral-900 p-3 rounded-xl border border-neutral-800">
             📍 You can bring printed copies or send soft copies via WhatsApp to <strong>{BUSINESS_INFO.contacts.phonePrimary}</strong>.
           </p>
         </div>
