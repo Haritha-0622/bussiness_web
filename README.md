@@ -1,20 +1,18 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# business_web - SANKAR'S Accounts & Auditing
 
-# Run and deploy your AI Studio app
+Professional website for SANKAR'S Accounts & Auditing in Pondicherry.
 
-This contains everything you need to run your app locally.
+## 🚀 Repository & Domain
+- **GitHub Repository:** https://github.com/Haritha-0622/bussiness_web
+- **Project Name:** `business_web`
 
-View your app in AI Studio: https://ai.studio/apps/220d4b66-6f2d-4067-8a25-8f60a4777dac
+## 🛠️ Run Locally
+```bash
+npm install
+npm run dev
+```
 
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 📦 Build for Production
+```bash
+npm run build
+```
